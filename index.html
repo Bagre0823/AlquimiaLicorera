@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Alquimia Licorera</title>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- CSS propio -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <!-- ================= HEADER ================= -->
+    <header class="header" id="header">
+
+        <div class="header-contenedor">
+            <div class="contenedor-header">
+                <img src="img/LogoGris2.png" alt="Logo Licores Artesanales">
+            </div>
+        </div>
+
+        <!-- NAV -->
+        <nav class="navbar navbar-expand-lg navbar-custom">
+            <div class="container-fluid">
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu"
+                    aria-controls="menu" aria-expanded="false" aria-label="Abrir menú de navegación">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse justify-content-center" id="menu">
+                    <ul class="navbar-nav">
+                        <li class="nav-item"><a class="nav-link" href="#">Inicio</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#cta">Quienes Somos</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#productos">Productos</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
+                    </ul>
+                </div>
+
+            </div>
+        </nav>
+
+    </header>
+
+    <!-- ================= HERO ================= -->
+    <section class="hero">
+        <div class="bloque-texto sombra-texto">
+
+            <h2>Cada botella cuenta una historia</h2>
+
+            <p>
+                Somos un emprendimiento familiar que hace licores artesanales con dedicación y mucho cariño.<br>
+                Cuidamos cada detalle, desde la elección de los ingredientes hasta el producto final.<br>
+                Nos gusta compartir lo que hacemos, porque creemos en los sabores simples y en los momentos que se
+                disfrutan en buena compañía.<br>
+                Cada botella lleva un poco de nuestra historia.
+            </p>
+
+            <div class="features">
+                <span>🍃 Ingredientes naturales</span>
+                <span>🧪 Producción artesanal</span>
+                <span>🕰️ Proceso cuidado / añejamiento</span>
+                <span>🎁 Presentación premium</span>
+                <span>🌎 Identidad local</span>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ================= BENEFICIOS ================= -->
+    <section class="beneficios">
+        <div class="contenedor">
+
+            <div class="beneficio">
+                <i class="fa-solid fa-leaf"></i>
+                <h3>100% Natural</h3>
+                <p>Ingredientes seleccionados sin aditivos.</p>
+            </div>
+
+            <div class="beneficio">
+                <i class="fa-solid fa-hand-holding-heart"></i>
+                <h3>Hecho con pasión</h3>
+                <p>Producción familiar artesanal.</p>
+            </div>
+
+            <div class="beneficio">
+                <i class="fa-solid fa-wine-bottle"></i>
+                <h3>Sabores únicos</h3>
+                <p>Recetas exclusivas e intensas.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ================= PRODUCTOS ================= -->
+    <section id="productos" class="productos">
+        <h2>Nuestros Licores</h2>
+        <div class="productos-grid" id="productos-grid"></div>
+    </section>
+
+    <!-- ================= CARRITO DE COMPRAS ================= -->
+    <hr>
+    <section class="carrito">
+        <h2>🛒 Carrito</h2>
+
+        <div id="carrito-contenedor">
+            <table class="tabla-carrito">
+                <thead>
+                    <tr>
+                        <th>Producto</th>
+                        <th>Precio</th>
+                        <th>Cantidad</th>
+                        <th>Subtotal</th>
+                    </tr>
+                </thead>
+                <tbody id="carrito-body"></tbody>
+            </table>
+        </div>
+
+        <div class="carrito-footer">
+            <h3>Total: $ <span id="total">0</span></h3>
+            <button id="vaciar-carrito" class="btn-enviar">Vaciar carrito</button>
+        </div>
+        <br>
+        <!-- formulario para enviar el pedido -->
+        <form id="formPedido" action="https://formspree.io/f/mbdebbba" method="POST" class="form-pedido">
+
+            <div class="form-grupo">
+                <input type="text" name="name" placeholder="Tu nombre" required>
+            </div>
+
+            <div class="form-grupo">
+                <input type="email" name="email" placeholder="Tu email" required>
+            </div>
+
+            <div class="form-grupo">
+                <input type="text" name="direccion" placeholder="Dirección de entrega" required>
+            </div>
+
+            <div class="form-grupo">
+                <textarea name="comentario" placeholder="Comentario (opcional)" rows="2"></textarea>
+            </div>
+
+            <!-- este campo se llena solo con el detalle del carrito antes de enviar -->
+            <input type="hidden" name="pedido">
+
+            <button type="submit" class="btn-enviar">Enviar pedido</button>
+
+            <div id="formMsgPedido" class="mt-3"></div>
+        </form>
+
+    </section>
+
+    <a href="#header" class="ir-arriba">⮝ Arriba</a>
+
+    <br>
+
+    <!-- ================= CTA ================= -->
+    <section class="cta" id="cta">
+        <span>Quiénes somos</span>
+        <h2>Probá nuestros licores hoy</h2>
+        <h3>Pasión embotellada</h3>
+
+        <p>
+            Detrás de cada uno de nuestros licores hay una historia que nace en lo simple:
+            el disfrute de crear, mezclar y dar vida a sabores únicos.
+        </p>
+
+        <p>
+            Trabajamos en pequeñas partidas, respetando los tiempos y procesos que permiten
+            que cada bebida alcance su mejor expresión.
+        </p>
+
+        <p>
+            No buscamos producir en masa,
+            sino ofrecer algo auténtico, hecho con dedicación.
+        </p>
+
+        <p>
+            Nuestros licores están pensados para acompañar momentos especiales,
+            para compartir, regalar o simplemente disfrutar.
+        </p>
+
+        <a href="#productos" class="btn-principal">Comprar ahora</a>
+
+        <a href="#header" class="ir-arriba">⮝ Arriba</a>
+
+    </section>
+
+    <!-- ================= CONTACTO ================= -->
+    <section id="contacto" class="contacto">
+        <div class="contacto-contenido">
+
+            <!-- IZQUIERDA: FORM -->
+            <div class="contacto-form">
+                <h2>Contacto</h2>
+                <span class="subtitulo">Estamos para ayudarte. Escribinos y te respondemos pronto.</span>
+
+                <form id="formContacto" action="https://formspree.io/f/mbdebbba" method="POST">
+                    <div class="form-grupo">
+                        <input type="text" name="name" placeholder="Nombre" required>
+                    </div>
+
+                    <div class="form-grupo">
+                        <input type="email" name="email" placeholder="Email" required>
+                    </div>
+
+                    <div class="form-grupo">
+                        <input type="text" name="asunto" placeholder="Asunto" required>
+                    </div>
+
+                    <div class="form-grupo">
+                        <textarea name="message" placeholder="Escribí tu mensaje..." required></textarea>
+                    </div>
+
+                    <button type="submit" class="btn-enviar">Enviar</button>
+
+                    <div id="formMsg" class="mt-3"></div>
+                </form>
+            </div>
+
+            <!-- DERECHA: TESTIMONIOS -->
+            <div class="contacto-testimonios">
+                <h3>Lo que opinan quienes ya nos eligieron</h3>
+
+                <div class="testimonio">
+                    <p>"Excelente calidad, sabores increíbles."</p>
+                    <span>★★★★★</span>
+                    <p>- Juan P.</p>
+                </div>
+
+                <div class="testimonio">
+                    <p>"Se nota lo artesanal, muy recomendable."</p>
+                    <span>★★★★★</span>
+                    <p>- María G.</p>
+                </div>
+
+                <div class="testimonio">
+                    <p>"Ideal para regalar o disfrutar."</p>
+                    <span>★★★★★</span>
+                    <p>- Laura M.</p>
+                </div>
+            </div>
+
+        </div>
+
+        <a href="#header" class="ir-arriba ir-arriba--sin-margen">⮝ Arriba</a>
+
+    </section>
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="footer">
+        <div class="footer-contenedor">
+
+            <div class="footer-bloque">
+                <h3>CONTACTO</h3>
+
+                <div class="footer-item">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <span>Buenos Aires, Argentina</span>
+                </div>
+
+                <div class="footer-item">
+                    <i class="fa-solid fa-phone"></i>
+                    <span>+54 11 1234 5678</span>
+                </div>
+
+                <div class="footer-item">
+                    <i class="fa-solid fa-envelope"></i>
+                    <span>info@alquimialicores.com</span>
+                </div>
+            </div>
+
+            <div class="footer-bloque">
+                <h3>NEWSLETTER</h3>
+
+                <p>Recibí novedades y promociones.</p>
+
+                <form id="formNewsletter" action="https://formspree.io/f/mbdebbba" method="POST" class="newsletter-form">
+                    <input type="email" name="email" placeholder="Tu email" required>
+                    <button type="submit">OK</button>
+                </form>
+                <div id="formMsgNewsletter" class="mt-2"></div>
+
+                <div class="footer-redes">
+                    <i class="fa-brands fa-facebook-f"></i>
+                    <i class="fa-brands fa-instagram"></i>
+                    <i class="fa-brands fa-youtube"></i>
+                </div>
+            </div>
+
+            <div class="footer-bloque footer-qr">
+                <img src="img/tarjetaQR2.png" alt="Código QR" loading="lazy">
+            </div>
+
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="formularios.js"></script>
+    <script src="productos.js"></script>
+   <script src="carrito.js"></script>
+
+</body>
+
+</html>
