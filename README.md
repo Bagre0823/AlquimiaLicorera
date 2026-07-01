@@ -48,7 +48,7 @@ Navegador moderno + conexión a internet (Para los conenidos de Bootstrap, Font 
 - Diseño responsive con media queries, ajustando tamaños y visibilidad de elementos en pantallas chicas.
 
 
-# Tecnologías UtilizadasS:
+# Tecnologías Utilizadas:
 -  HTML5 - estructura semántica del sitio (index.html).
 -  CSS3 - estilos propios, variables CSS, Flexbox y diseño responsive (styles.css).
 -  JavaScript - separado en dos archivos:
